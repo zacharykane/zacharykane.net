@@ -6,10 +6,26 @@
         <title>Zacharykane</title>
         <meta name="description" content="This is the personal website of developer and garage rock patron, Zacharykane">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="https://use.typekit.net/tmt5fnr.css">
+        <script>
+            (function onLoad() {
+                if(sessionStorage.fontsLoadedFoutWithClass) {
+                    document.documentElement.className += " fonts-loaded";
+                    return;
+                }
+                if('fonts' in document) {
+                    Promise.all([
+                        document.fonts.load("600 1em fira-sans-2"),
+                        document.fonts.load("700 1em fira-sans-2")
+                    ]).then(function () {
+                        document.documentElement.className += " fonts-loaded";
+                        sessionStorage.fontsLoadedFoutWithClass = true;
+                    });
+                }
+            })();
+        </script>
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
-
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -20,9 +36,7 @@
 
         <div class="root">
             <h1>Zacharykane</h1>
-            <p>
-                Well hey! I am a developer and lover of (almost) all things art / culture emerging on the web. This is my sandbox to contribute to that space. What follows is a list to reference where on web where I can be found and, in addition, projects & experiements I've built.
-            </p>
+            <p>Well hey! I am a developer and lover of (almost) all things art / culture emerging on the web. This is my sandbox to contribute to that space. What follows is a list to reference where on web where I can be found and, in addition, projects & experiements I've built.</p>
             <ul>
                 <li><a href="https://stackoverflow.com/cv/zacharykane">Stack Overflow resume</a></li>
                 <li><a href="https://steamcommunity.com/id/zacharykane/">Steam Profile</a></li>
