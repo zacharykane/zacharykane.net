@@ -7,23 +7,7 @@
         <meta name="description" content="This is the personal website of developer and garage rock patron, Zacharykane">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.typekit.net/tmt5fnr.css">
-        <script>
-            (function onLoad() {
-                if(sessionStorage.fontsLoadedFoutWithClass) {
-                    document.documentElement.className += " fonts-loaded";
-                    return;
-                }
-                if('fonts' in document) {
-                    Promise.all([
-                        document.fonts.load("600 1em fira-sans-2"),
-                        document.fonts.load("700 1em fira-sans-2")
-                    ]).then(function () {
-                        document.documentElement.className += " fonts-loaded";
-                        sessionStorage.fontsLoadedFoutWithClass = true;
-                    });
-                }
-            })();
-        </script>
+        <script src="js/fonts.js"></script>
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="css/normalize.css">
