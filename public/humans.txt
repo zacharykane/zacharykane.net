@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Zach Pride -- Author
+
+# THANKS
+
+    Kara
+    HTML5 ★ BOILERPLATE
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
