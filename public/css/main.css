@@ -12,11 +12,9 @@
    ========================================================================== */
 
 html {
-    color: #222;
-    font-size: 1em; /* https://betterwebtype.com/articles/2019/06/16/5-keys-to-accessible-web-typography/ */
-    line-height: 1.4;
-    font-family: Verdana, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #222;
+  font-size: 1em; /* https://betterwebtype.com/articles/2019/06/16/5-keys-to-accessible-web-typography/ */
+  line-height: 1.4;
 }
 
 /*
@@ -30,13 +28,13 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 /*
@@ -44,12 +42,12 @@ html {
  */
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 /*
@@ -64,7 +62,7 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*
@@ -72,9 +70,9 @@ video {
  */
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -82,7 +80,7 @@ fieldset {
  */
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 /* ==========================================================================
@@ -90,43 +88,122 @@ textarea {
    ========================================================================== */
 
 .browserupgrade {
-    margin: 0.2em 0;
-    padding: 0.2em 0;
-    background: #ccc;
-    color: #000;
+  margin: 0.2em 0;
+  padding: 0.2em 0;
+  background: #ccc;
+  color: #000;
 }
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+#construction {
+  height: 2rem;
+  background: repeating-linear-gradient(
+    45deg,
+    dimgray 0%,
+    dimgrey 2%,
+    gold 2%,
+    gold 4%
+  );
 }
 
 .root {
-    max-width: 640px;
-    margin: auto;
-    padding: 0 1.4rem;
-    font-size: 1.4rem;
+  max-width: 640px;
+  margin: auto;
+  padding: 0 1.4rem;
+  font-size: 1.4rem;
 }
 
 h1 {
-    color: rebeccapurple;
-    font-weight: 700;
+  color: rebeccapurple;
+  font-weight: 700;
 }
 
 li a {
-    display: block;
-    padding: 1rem;
+  display: block;
+  padding: 0.5rem 0;
 }
 
 .doge-message {
-    font-style: oblique;
-    text-align: center;
+  font-style: oblique;
+  text-align: center;
 }
 .doge-portrait {
-    max-width: 960px;
-    width: 100%;
+  max-width: 960px;
+  width: 100%;
+}
+
+.val {
+  background: pink;
+}
+.val #frame {
+  text-align: center;
+}
+.val #shadow {
+  position: relative;
+  width: 60vw;
+  height: 30px;
+  background: #2216;
+  border-radius: 100%;
+  margin: auto;
+  box-shadow: 0px 1px 6px 13px #2216;
+}
+.val #portrait {
+  position: relative;
+  width: 75vw;
+  animation: swivel 1s ease-in-out infinite alternate;
+  z-index: 1;
+}
+.val #frame p {
+  margin: 3em 0;
+  font-family: cursive;
+  font-size: 2em;
+}
+
+@keyframes swivel {
+  from {
+    transform: perspective(100px) rotateY(1deg);
+  }
+  to {
+    transform: perspective(100px) rotateY(-1deg);
+  }
+}
+
+#motion-frame {
+  position: absolute;
+  z-index: 5;
+  width: 100vw;
+  height: 80vh;
+}
+.motion-demo {
+  position: absolute;
+  top: 0;
+  left: 1em;
+  width: 2em;
+  height: 100%;
+  background: url(../img/red-heart.png);
+  background-repeat: space;
+  background-size: 2em;
+}
+.motion-demo:nth-child(2) {
+  right: 1em;
+  left: unset;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
 }
 
 /* ==========================================================================
@@ -139,7 +216,7 @@ li a {
 
 .hidden,
 [hidden] {
-    display: none !important;
+  display: none !important;
 }
 
 /*
@@ -152,16 +229,16 @@ li a {
  */
 
 .sr-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    /* 1 */
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
 }
 
 /*
@@ -172,13 +249,13 @@ li a {
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    white-space: inherit;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
 }
 
 /*
@@ -186,7 +263,7 @@ li a {
  */
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 /*
@@ -203,12 +280,12 @@ li a {
 
 .clearfix::before,
 .clearfix::after {
-    content: ' ';
-    display: table;
+  content: ' ';
+  display: table;
 }
 
 .clearfix::after {
-    clear: both;
+  clear: both;
 }
 
 /* ==========================================================================
@@ -218,23 +295,23 @@ li a {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-    .root {
-        padding: 0 1.25rem;
-        font-size: 1.25rem;
-        line-height: 1.5;
-    }
+  /* Style adjustments for viewports that meet the condition */
+  .root {
+    padding: 0 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
 
-    li a {
-        display: inline-block;
-    }
+  li a {
+    display: inline-block;
+  }
 }
 
 @media print,
-    (-webkit-min-device-pixel-ratio: 1.25),
-    (min-resolution: 1.25dppx),
-    (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
@@ -244,70 +321,70 @@ li a {
    ========================================================================== */
 
 @media print {
-    *,
-    *::before,
-    *::after {
-        background: #fff !important;
-        color: #000 !important;
-        /* Black prints faster */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-    a[href]::after {
-        content: ' (' attr(href) ')';
-    }
+  a[href]::after {
+    content: ' (' attr(href) ')';
+  }
 
-    abbr[title]::after {
-        content: ' (' attr(title) ')';
-    }
+  abbr[title]::after {
+    content: ' (' attr(title) ')';
+  }
 
-    /*
+  /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-    a[href^='#']::after,
-    a[href^='javascript:']::after {
-        content: '';
-    }
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
+  }
 
-    pre {
-        white-space: pre-wrap !important;
-    }
+  pre {
+    white-space: pre-wrap !important;
+  }
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 
-    /*
+  /*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-    thead {
-        display: table-header-group;
-    }
+  thead {
+    display: table-header-group;
+  }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
